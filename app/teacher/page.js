@@ -1,21 +1,89 @@
-// components/TeacherPage.js
+// components/TeacherDashboard.js
 import React from 'react';
 
-const TeacherPage = () => {
+const TeacherDashboard = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-md shadow-md text-center">
-        <h1 className="text-3xl font-semibold mb-8">Teacher Dashboard</h1>
+    <div className="p-8">
+      {/* Section: Assignments */}
+      <div className="card mb-4">
+        <h2 className="text-2xl font-semibold mb-2">Teacher Dashboard</h2>
 
-        {/* Assignment Submission Button */}
-        <ul className="menu bg-base-200 w-56">
-  <li><a href="/teacher/upload_syllabus" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">Upload Syllabus</a></li>
-  <li><a href="/teacher/student_recordings" className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md"> Student Practice</a></li>
-  <li><a href="/teacher/review_feedback" className="bg-green-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md">Review Feedback</a></li>
-</ul>
+        {/* Assignment 1 */}
+        <div className="collapse mb-2">
+          <input type="checkbox" />
+          <div className="collapse-title text-xl font-medium">
+            Assignment 1
+          </div>
+          <div className="collapse-content">
+
+            {/* Student Submissions for Assignment 1 */}
+            <div className="card mb-2">
+              <h3 className="text-lg font-semibold mb-2">Student Submissions</h3>
+              <div className="collapse mb-2">
+                <input type="checkbox" />
+                <div className="collapse-title text-md font-medium">
+                  Student 1 Submission
+                </div>
+                <div className="collapse-content">
+                  <p>Details of Student 1's submission for Assignment 1...</p>
+                  <audio controls className="w-full mt-2">
+                    <source src="path/to/audio-file.mp3" type="audio/mp3" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              </div>
+              <div className="collapse mb-2">
+                <input type="checkbox" />
+                <div className="collapse-title text-md font-medium">
+                  Student 2 Submission
+                </div>
+                <div className="collapse-content">
+                  <p>Details of Student 2's submission for Assignment 1...</p>
+                  <audio controls className="w-full mt-2">
+                    <source src="path/to/audio-file.mp3" type="audio/mp3" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              </div>
+              {/* Add more Collapse components for additional submissions */}
+            </div>
+
+            {/* General Feedback for Assignment 1 */}
+            <div className="card">
+              <h3 className="text-lg font-semibold mb-2">General Feedback</h3>
+              <p>General feedback for Assignment 1...</p>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Assignment 2 */}
+        <div className="collapse mb-2">
+          <input type="checkbox" />
+          <div className="collapse-title text-xl font-medium">
+            Assignment 2
+          </div>
+          <div className="collapse-content">
+
+            {/* Student Submissions for Assignment 2 */}
+            <div className="card mb-2">
+              <h3 className="text-lg font-semibold mb-2">Student Submissions</h3>
+              {/* ... Similar structure for student submissions */}
+            </div>
+
+            {/* General Feedback for Assignment 2 */}
+            <div className="card">
+              <h3 className="text-lg font-semibold mb-2">General Feedback</h3>
+              {/* ... General feedback content */}
+            </div>
+
+          </div>
+        </div>
+
+        {/* Add more Collapse components for additional assignments */}
       </div>
     </div>
   );
 };
 
-export default TeacherPage;
+export default TeacherDashboard;
