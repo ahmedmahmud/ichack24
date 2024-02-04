@@ -13,9 +13,9 @@ const StudentPage = () => {
         </button>
 
         {/* Speech Practice Button */}
-        <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md mb-4">
+        <a href="/student/speech_practice" className="bg-green-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md">
           Speech Practice
-        </button>
+        </a>
 
         {/* Feedback Page Button */}
         <a href="/student/feedback" className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md">
