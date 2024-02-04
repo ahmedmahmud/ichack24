@@ -15,10 +15,10 @@ const StudentPage = () => {
         <p className='mb-8 mt-2 text-md'>
           A list of verbal assignments set by your teacher for you to complete
         </p>
-        <button className="card bg-primary/10 shadow-xl border border-primary/40 text-left">
+        <button className="card bg-primary/10 shadow-xl border border-primary/40 text-left hover:scale-105 transition-all">
           <div className="card-body p-4">
-            <h2 className="card-title">Assignment 1</h2>
-            <p>Have a casual conversation with the CTO of Marshall Wace - Conor Kiernan</p>
+            <h2 className="card-title text-sm font-bold tracking-tighter">Assignment 1</h2>
+            <p className='text-md tracking-tigher'>A Casual conversation with Conor Kiernan</p>
           </div>
         </button>
         <div className="divider mt-10 mb-10">OR</div>
@@ -27,17 +27,6 @@ const StudentPage = () => {
           Practice a conversation with a virtual teacher in your own comfort
         </p>
         <button className='btn btn-primary'>Speech Practice</button>
-        {/* <div className="bg-gray-800 p-8 rounded-md shadow-md text-center max-w-md w-full mx-auto">
-
-        <div className="join join-vertical">
-          <a href="/student/speech_practice" className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md w-full inline-block">
-            Speech Practice
-          </a>
-          <a href="/student/feedback" className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md w-full inline-block">
-            View Feedback
-          </a>
-        </div>
-      </div> */}
       </div>
     </div>
   );
