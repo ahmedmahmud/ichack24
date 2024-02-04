@@ -5,7 +5,7 @@ const TeacherPage = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-md shadow-md text-center">
-        <h1 className="text-3xl font-semibold mb-8">Student Dashboard</h1>
+        <h1 className="text-3xl font-semibold mb-8">Teacher Dashboard</h1>
 
         {/* Assignment Submission Button */}
         <ul className="menu bg-base-200 w-56">
@@ -18,4 +18,4 @@ const TeacherPage = () => {
   );
 };
 
-export default StudentPage;
+export default TeacherPage;
