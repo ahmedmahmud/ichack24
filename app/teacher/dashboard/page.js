@@ -26,112 +26,61 @@ const TeacherDashboard = () => {
 
   return (
     <div className="p-8  text-white h-screen w-screen">
-      {/* Section: Assignments */}
-      <div className="card mb-4">
-
-        
-        <div className='flex flex-row w-full h-full'>
-          <div className='basis-1/5 h-full flex flex-col gap-8'>
-            <h2 className="text-4xl font-semibold mb-2">Teacher Dashboard</h2>
-            <div className='text-xl font-medium bg-primary/10 border border-primary/40 p-5 rounded-lg cursor-pointer'>
-              Set New Assignment <span className='text-2xl'>+</span>
-            </div>
-            <div className='h-[30rem] flex flex-col gap-8 overflow-auto'>
-              {assignments.map((items, index) => (
-                <div className='text-xl font-medium bg-primary/10 border border-primary/40 p-5 rounded-lg cursor-pointer'>
-                  Assignment {index}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className='basis-4/5 p-10 my-auto mx-auto'>
-            <div className='border-2 border-primary/40  rounded-xl h-[40rem] w-[60rem] my-auto mx-auto flex flex-col items-center justify-center'>
-                <div className='text-2xl font-bold'>
-                  Create a new assignment
-                </div>
-                <div className='grid grid-cols-3 p-5'>
-                  {}
-                </div>
-            </div>
-          </div>
-
+      <nav className='mx-4'>
+        <div className='mx-auto py-5 text-center text-4xl tracking-tighter text-white/80'>
+          <p><span className='font-bold'>Professor</span> Phil</p>
         </div>
-
-        
-
-        {/* Assignment 1 */}
-        <div className="collapse mb-2">
+      </nav>
+      <div className="flex flex-col max-w-2xl mx-auto text-white py-8">
+        <div className="collapse mb-2 bg-primary/10 border border-primary/40">
           <input type="checkbox" />
-          <div className="collapse-title text-xl font-medium">
-            Assignment 1
+          <div className="collapse-title ">
+            <p className='font-bold tracking-tighter text-sm mb-2'>Assignment 1</p>
+            <p className='text-md tracking-tigher'>A Casual conversation with Conor Kiernan</p>
           </div>
+
           <div className="collapse-content">
-
-            {/* Student Submissions for Assignment 1 */}
-            <div className="card mb-2">
-              <h3 className="text-lg font-semibold mb-2">Student Submissions</h3>
-              <div className="collapse mb-2">
-                <input type="checkbox" />
-                <div className="collapse-title text-md font-medium">
-                  Student 1 Submission
-                </div>
-                <div className="collapse-content">
-                  <p>Details of Student 1's submission for Assignment 1...</p>
-                  <audio controls className="w-full mt-2">
-                    <source src="path/to/audio-file.mp3" type="audio/mp3" />
-                    Your browser does not support the audio element.
-                  </audio>
-                </div>
+            <p className='text-sm text-tighter'>Here are the feedback reports for the students who have submitted the assignment</p>
+            <div className="bg-primary/10  collapse mt-4">
+              <input type="checkbox" />
+              <div className="collapse-title text-md font-bold tracking-tighter">
+                Student 1 Submission
               </div>
-              <div className="collapse mb-2">
-                <input type="checkbox" />
-                <div className="collapse-title text-md font-medium">
-                  Student 2 Submission
-                </div>
-                <div className="collapse-content">
-                  <p>Details of Student 2's submission for Assignment 1...</p>
-                  <audio controls className="w-full mt-2">
-                    <source src="path/to/audio-file.mp3" type="audio/mp3" />
-                    Your browser does not support the audio element.
-                  </audio>
-                </div>
-              </div>
-              {/* Add more Collapse components for additional submissions */}
-            </div>
+              <article className="collapse-content prose">
+                <p>
+                  <b>"Comment ca va?"</b> → Correct form: <b>"Comment ça va ?"</b><br />
+                  The student should practice recognizing and applying accent marks correctly to enhance written communication skills.
+                  Verb Conjugation:
+                </p><p>
+                  <b>"Je ne savons pas"</b> → Correct form: <b>"Je ne sais pas"</b><br />
+                  The student needs reinforcement in conjugating verbs accurately, particularly in matching the subject with the appropriate verb form.
+                  Subject-Verb Agreement and Tense:
+                </p><p>
 
-            {/* General Feedback for Assignment 1 */}
-            <div className="card">
-              <h3 className="text-lg font-semibold mb-2">General Feedback</h3>
-              <p>General feedback for Assignment 1...</p>
-            </div>
+                  <b>"Comment tu va faire ce weekend"</b> → Correct form: <b>"Comment tu vas faire ce weekend"</b><br />
+                  The errors indicate challenges with subject-verb agreement and tense formation. The student should focus on mastering verb conjugations and understanding verb tenses in context.
+                  Spelling and Vocabulary:
+                </p><p>
 
+                  <b>"j'ai redard le tele"</b> → Correct form: <b>"J'ai regardé la télé"</b><br />
+                  The mistakes suggest a need for improvement in spelling and vocabulary. Encourage the student to expand their vocabulary and pay attention to spelling rules.
+                  By addressing these specific areas of weakness, the student can make significant progress in French language proficiency. Consider providing targeted exercises and additional practice opportunities to reinforce learning and facilitate improvement.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
+        <div className="divider mt-10 mb-10">OR</div>
 
-        {/* Assignment 2 */}
-        <div className="collapse mb-2">
-          <input type="checkbox" />
-          <div className="collapse-title text-xl font-medium">
-            Assignment 2
-          </div>
-          <div className="collapse-content">
-
-            {/* Student Submissions for Assignment 2 */}
-            <div className="card mb-2">
-              <h3 className="text-lg font-semibold mb-2">Student Submissions</h3>
-              {/* ... Similar structure for student submissions */}
+        <div className="card bg-primary/10 shadow-xl border border-primary/40 text-left">
+          <div className="card-body p-4">
+            <h2 className="card-title text-md font-bold tracking-tighter">Create new assignment</h2>
+            <div className='flex gap-2 mt-2'>
+              <input type="text" placeholder="Assignment description..." className="input input-bordered w-full" />
+              <button className='btn btn-primary'>Create</button>
             </div>
-
-            {/* General Feedback for Assignment 2 */}
-            <div className="card">
-              <h3 className="text-lg font-semibold mb-2">General Feedback</h3>
-              {/* ... General feedback content */}
-            </div>
-
           </div>
         </div>
-
-        {/* Add more Collapse components for additional assignments */}
       </div>
     </div>
   );
