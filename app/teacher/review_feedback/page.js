@@ -1,34 +1,67 @@
+// components/TeacherDashboard.js
 import React from 'react';
 
-const AssignmentFeedback = ({ title, content }) => {
+const TeacherDashboard = () => {
   return (
-    <div className="bg-white p-4 rounded-md shadow-md mb-4">
-      <h2 className="text-lg font-semibold mb-2">{title}</h2>
-      <p>{content}</p>
+    <div className="p-8">
+      {/* Section: Previous Assignments */}
+      <div className="card mb-4">
+        <h2 className="text-2xl font-semibold mb-2">Previous Assignments</h2>
+        {/* Content for Previous Assignments */}
+        <div className="collapse mb-2">
+          <input type="checkbox" />
+          <div className="collapse-title text-xl font-medium">
+            Assignment 1
+          </div>
+          <div className="collapse-content">
+            <p>Details and student submissions for Assignment 1...</p>
+          </div>
+        </div>
+        <div className="collapse mb-2">
+          <input type="checkbox" />
+          <div className="collapse-title text-xl font-medium">
+            Assignment 2
+          </div>
+          <div className="collapse-content">
+            <p>Details and student submissions for Assignment 2...</p>
+          </div>
+        </div>
+        {/* Add more Collapse components for additional assignments */}
+      </div>
+
+      {/* Section: Student Submissions */}
+      <div className="card mb-4">
+        <h2 className="text-2xl font-semibold mb-2">Student Submissions</h2>
+        {/* Content for Student Submissions */}
+        <div className="collapse mb-2">
+          <input type="checkbox" />
+          <div className="collapse-title text-xl font-medium">
+            Student 1 Submission
+          </div>
+          <div className="collapse-content">
+            <p>Details of Student 1's submission...</p>
+          </div>
+        </div>
+        <div className="collapse mb-2">
+          <input type="checkbox" />
+          <div className="collapse-title text-xl font-medium">
+            Student 2 Submission
+          </div>
+          <div className="collapse-content">
+            <p>Details of Student 2's submission...</p>
+          </div>
+        </div>
+        {/* Add more Collapse components for additional submissions */}
+      </div>
+
+      {/* Section: General Feedback */}
+      <div className="card mb-4">
+        <h2 className="text-2xl font-semibold mb-2">General Feedback</h2>
+        {/* Content for General Feedback */}
+        <p>Feedback for the teacher based on all assignments...</p>
+      </div>
     </div>
   );
 };
 
-const SubmitAssignmentPagePage = () => {
-  // Hardcoded list of previous feedbacks
-  const previousFeedbacks = [
-    { title: 'Assignment 1', content: 'Feedback details for assignment 1...' },
-    { title: 'Assignment 2', content: 'Feedback details for assignment 2...' },
-    { title: 'Assignment 3', content: 'Feedback details for assignment 3...' },
-    { title: 'Assignment 4', content: 'Feedback details for assignment 4...' },
-    { title: 'Assignment 5', content: 'Feedback details for assignment 5...' },
-  ];
-
-  return (
-    <div className="container mx-auto mt-8 p-4">
-      <h1 className="text-3xl font-semibold mb-4">Feedback Page</h1>
-
-      {/* List of Previous Assignment Feedbacks */}
-      {previousFeedbacks.map((feedback, index) => (
-        <AssignmentFeedback key={index} title={feedback.title} content={feedback.content} />
-      ))}
-    </div>
-  );
-};
-
-export default SubmitAssignmentPage;
+export default TeacherDashboard;

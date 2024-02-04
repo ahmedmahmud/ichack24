@@ -1,25 +1,21 @@
 'use client'
-
 // components/FeedbackPage.js
 import React, { useState } from 'react';
 
 const AssignmentFeedback = ({ title, content }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  const toggleExpansion = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div className="bg-gray-100 p-6 rounded-md shadow-md mb-4">
-      <div className="flex items-center justify-between mb-2 cursor-pointer">
-        <h2
-          className="text-xl font-semibold"
-          onClick={() => setIsExpanded(!isExpanded)}
-        >
+      <div className="flex items-center justify-between mb-2 cursor-pointer" onClick={toggleExpansion}>
+        <h2 className="text-xl font-semibold">
           {title}
         </h2>
-        <span
-          className={`transition-transform duration-300 ${
-            isExpanded ? 'transform rotate-180' : ''
-          }`}
-        >
+        <span className={`transition-transform duration-300 ${isExpanded ? 'transform rotate-180' : ''}`}>
           &#9654; {/* Chevron right (U+25B6) */}
         </span>
       </div>
