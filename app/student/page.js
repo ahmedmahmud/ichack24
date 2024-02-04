@@ -1,5 +1,8 @@
 // components/StudentPage.js
+'use client'
 import React from 'react';
+
+ 
 
 const StudentPage = () => {
   return (
@@ -8,7 +11,7 @@ const StudentPage = () => {
         <h1 className="text-3xl font-semibold mb-8">Student Dashboard</h1>
 
         {/* File Input and Submit Assignment Button */}
-        <div className="flex items-center justify-center space-x-2 mb-4">
+        <div className="join join-vertical">
           <input
             type="file"
             id="fileInput"
@@ -16,20 +19,29 @@ const StudentPage = () => {
           />
           <label
             htmlFor="fileInput"
-            className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
+            className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md w-full inline-block"
           >
             Choose File
           </label>
-          <a href="/student/submit_assignment"
-            type="button"
-            className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
-          >
+          <button
+            className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md w-full inline-block"
+            onClick={()=>document.getElementById('my_modal_4').showModal()}>
             Submit Assignment
-          </a>
-        </div>
+          </button>
+          <dialog id="my_modal_4" className="modal">
+  <div className="modal-box">
+    <h3 className="font-bold text-lg">Hello!</h3>
+    <p className="py-4">Press ESC key or click outside to close</p>
+  </div>
+  <form method="dialog" className="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+        
 
         {/* Speech Practice Button */}
-        <a href="/student/speech_practice"  className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md mb-4 w-full">
+        <a href="/student/speech_practice"  className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md w-full inline-block">
           Speech Practice
         </a>
 
@@ -37,6 +49,7 @@ const StudentPage = () => {
         <a href="/student/feedback" className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md w-full inline-block">
           View Feedback
         </a>
+        </div>
       </div>
     </div>
   );

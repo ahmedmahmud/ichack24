@@ -10,7 +10,7 @@ const TeacherPage = () => {
         {/* Assignment Submission Button */}
         <ul className="menu bg-base-200 w-56">
   <li><a href="/teacher/upload_syllabus" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">Upload Syllabus</a></li>
-  <li><a href="/teacher/mark_schemes" className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md"> Student Practice</a></li>
+  <li><a href="/teacher/student_recordings" className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md"> Student Practice</a></li>
   <li><a href="/teacher/review_feedback" className="bg-green-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md">Review Feedback</a></li>
 </ul>
       </div>
