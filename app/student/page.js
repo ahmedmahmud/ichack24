@@ -7,7 +7,7 @@ const StudentPage = () => {
     <div className='h-screen'>
       <nav className='mx-4'>
         <div className='mx-auto py-5 text-center text-4xl tracking-tighter text-white/80'>
-          <p><span className='font-bold'>Professor</span> Phil</p>
+        <p><span className='font-bold'>Lingua</span>Link AI</p>
         </div>
       </nav>
       <div className="flex flex-col max-w-md mx-auto text-white py-8">
