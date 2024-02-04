@@ -8,19 +8,11 @@ const StudentPage = () => {
         <h1 className="text-3xl font-semibold mb-8">Student Dashboard</h1>
 
         {/* Assignment Submission Button */}
-        <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md mb-4">
-          Submit Assignment
-        </button>
-
-        {/* Speech Practice Button */}
-        <a href="/student/speech_practice" className="bg-green-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md">
-          Speech Practice
-        </a>
-
-        {/* Feedback Page Button */}
-        <a href="/student/feedback" className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md">
-          View Feedback
-        </a>
+        <ul className="menu bg-base-200 w-56">
+  <li><a href="/student/submit_assignment" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">Submit Assignment</a></li>
+  <li><a href="/student/speech_practice" className="bg-green-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md">Speech Practice</a></li>
+  <li><a href="/student/feedback" className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md"> View Feedback</a></li>
+</ul>
       </div>
     </div>
   );

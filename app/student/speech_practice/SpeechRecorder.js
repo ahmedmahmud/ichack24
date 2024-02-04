@@ -69,7 +69,7 @@ const SpeechRecorder = () => {
 
   return (
     <div>
-      <button onClick={() => setRecording(!recording)}>
+      <button onClick={() => setRecording(!recording)} className="bg-green-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md">
         {recording ? 'Stop Recording' : 'Start Recording'}
       </button>
     </div>
@@ -77,3 +77,5 @@ const SpeechRecorder = () => {
 };
 
 export default SpeechRecorder;
+
+
