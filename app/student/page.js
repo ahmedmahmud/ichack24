@@ -3,16 +3,40 @@ import React from 'react';
 
 const StudentPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-md shadow-md text-center">
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
+      <div className="bg-gray-800 p-8 rounded-md shadow-md text-center max-w-md w-full mx-auto">
         <h1 className="text-3xl font-semibold mb-8">Student Dashboard</h1>
 
-        {/* Assignment Submission Button */}
-        <ul className="menu bg-base-200 w-56">
-  <li><a href="/student/submit_assignment" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">Submit Assignment</a></li>
-  <li><a href="/student/speech_practice" className="bg-green-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md">Speech Practice</a></li>
-  <li><a href="/student/feedback" className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md"> View Feedback</a></li>
-</ul>
+        {/* File Input and Submit Assignment Button */}
+        <div className="flex items-center justify-center space-x-2 mb-4">
+          <input
+            type="file"
+            id="fileInput"
+            className="hidden"
+          />
+          <label
+            htmlFor="fileInput"
+            className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
+          >
+            Choose File
+          </label>
+          <a href="/student/submit_assignment"
+            type="button"
+            className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md cursor-pointer"
+          >
+            Submit Assignment
+          </a>
+        </div>
+
+        {/* Speech Practice Button */}
+        <a href="/student/speech_practice"  className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md mb-4 w-full">
+          Speech Practice
+        </a>
+
+        {/* Feedback Page Button */}
+        <a href="/student/feedback" className="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-md w-full inline-block">
+          View Feedback
+        </a>
       </div>
     </div>
   );
