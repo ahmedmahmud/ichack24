@@ -1,6 +1,4 @@
 "use client";
-import SpeechRecorder from "./SpeechRecorder";
-
 import React, { useState, useEffect , useRef} from "react";
 
 const conversation = [
@@ -64,7 +62,7 @@ const SpeechPracticePage = () => {
     } else {
       videoRef.current.pause();
     }
-    // setIsPlaying(!isPlaying);
+    setIsPlaying(!isPlaying);
   };
 
   const handleSetCounter= () => {
@@ -73,12 +71,12 @@ const SpeechPracticePage = () => {
       setBtnMessage("Stop Recording");
       setCounter( counter + 1);
       // setPlayVideo(false);
-      // togglePlayPause()
+      togglePlayPause()
     } else {
       setBtnMessage("Start Recording");
       setCounter( counter + 1);
       // setPlayVideo(true);##
-       togglePlayPause()
+      togglePlayPause()
 
     }
 
@@ -105,7 +103,7 @@ const SpeechPracticePage = () => {
       <div className="bg-white rounded-lg p-6 w-[600px]">
         {/* <button  onClick={() => handleSetCounter()} >goo</button> */}
         <button className="btn	btn-primary mb-4" onClick={() => handleSetCounter()}>{btnMessage}</button>
-        {counter}
+        {/* {counter} */}
         {/* <SpeechRecorder  onClick={() => handleSetCounter()} /> */}
         <div className="space-y-4 mb-4"> </div>
 
@@ -139,7 +137,7 @@ const SpeechPracticePage = () => {
 
 function Clip({ i, videoRef }) {
   return (
-    <video ref={videoRef} controls autoPlay className="w-full h-full object-cover"  key={i}>
+    <video ref={videoRef} controls autoPlay  className="w-full h-full object-cover"  key={i}>
       <source src={`/${Math.floor(i/2)}.mp4`} type="video/mp4" />
     </video>
   );

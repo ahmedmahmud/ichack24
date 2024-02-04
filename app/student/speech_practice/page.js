@@ -1,6 +1,4 @@
 "use client";
-import SpeechRecorder from "./SpeechRecorder";
-
 import React, { useState, useEffect , useRef} from "react";
 
 const conversation = [
