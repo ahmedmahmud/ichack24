@@ -15,10 +15,10 @@ const StudentPage = () => {
         <p className='mb-8 mt-2 text-md'>
           A list of verbal assignments set by your teacher for you to complete
         </p>
-        <button className="card bg-base-100 shadow-xl border border-primary/40 text-left">
+        <button className="card bg-primary/10 shadow-xl border border-primary/40 text-left">
           <div className="card-body p-4">
             <h2 className="card-title">Assignment 1</h2>
-            <p>Description</p>
+            <p>Have a casual conversation with the CTO of Marshall Wace - Conor Kiernan</p>
           </div>
         </button>
         <div className="divider mt-10 mb-10">OR</div>
