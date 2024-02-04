@@ -105,7 +105,7 @@ const SpeechPracticePage = () => {
       <div className="bg-white rounded-lg p-6 w-[600px]">
         {/* <button  onClick={() => handleSetCounter()} >goo</button> */}
         <button className="btn	btn-primary mb-4" onClick={() => handleSetCounter()}>{btnMessage}</button>
-        {counter}
+        {/* {counter} */}
         {/* <SpeechRecorder  onClick={() => handleSetCounter()} /> */}
         <div className="space-y-4 mb-4"> </div>
 
