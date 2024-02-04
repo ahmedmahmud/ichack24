@@ -1,12 +1,54 @@
-// components/TeacherDashboard.js
+// components/TeacherHome.js
 import React from 'react';
+import { Button } from 'daisyui';
 
 const TeacherDashboard = () => {
+
+
+  const assignments = [
+    {}, {}, {}
+  ]
+
+  const setAss = (
+    <div>
+      <div>
+        Set Assignment
+      </div>
+      <div>
+      </div>
+    </div>
+  )
+
+
   return (
-    <div className="p-8">
+    <div className="p-8 bg-black text-white h-screen w-screen">
       {/* Section: Assignments */}
       <div className="card mb-4">
-        <h2 className="text-2xl font-semibold mb-2">Teacher Dashboard</h2>
+
+        
+        <div className='flex flex-row w-full h-full'>
+          <div className='basis-1/5 h-full flex flex-col gap-8'>
+            <h2 className="text-4xl font-semibold mb-2">Teacher Dashboard</h2>
+            <div className='text-xl font-medium bg-gradient-to-r from-indigo-500 to-purple-500 p-5 border border-black rounded-lg cursor-pointer'>
+              Set New Assignment <span className='text-2xl'>+</span>
+            </div>
+            <div className='h-[30rem] flex flex-col gap-8 overflow-auto'>
+              {assignments.map((items, index) => (
+                <div className='text-xl font-medium bg-gradient-to-r from-indigo-500 to-purple-500 p-5 border border-black rounded-lg cursor-pointer'>
+                  Assignment {index}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className='basis-4/5 p-10 my-auto mx-auto'>
+            <div className='border-4 border-purple-600 rounded-xl h-[40rem] w-[60rem] my-auto mx-auto'>
+                hi
+            </div>
+          </div>
+
+        </div>
+
+        
 
         {/* Assignment 1 */}
         <div className="collapse mb-2">
