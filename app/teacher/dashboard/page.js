@@ -1,8 +1,12 @@
 // components/TeacherHome.js
-import React from 'react';
+'use client'
+
+import React, { useState } from 'react';
 import { Button } from 'daisyui';
 
 const TeacherDashboard = () => {
+
+  const [selected, selectedIndex] = useState(-1)
 
 
   const assignments = [
@@ -21,7 +25,7 @@ const TeacherDashboard = () => {
 
 
   return (
-    <div className="p-8 bg-black text-white h-screen w-screen">
+    <div className="p-8  text-white h-screen w-screen">
       {/* Section: Assignments */}
       <div className="card mb-4">
 
@@ -29,20 +33,25 @@ const TeacherDashboard = () => {
         <div className='flex flex-row w-full h-full'>
           <div className='basis-1/5 h-full flex flex-col gap-8'>
             <h2 className="text-4xl font-semibold mb-2">Teacher Dashboard</h2>
-            <div className='text-xl font-medium bg-gradient-to-r from-indigo-500 to-purple-500 p-5 border border-black rounded-lg cursor-pointer'>
+            <div className='text-xl font-medium bg-primary/10 border border-primary/40 p-5 rounded-lg cursor-pointer'>
               Set New Assignment <span className='text-2xl'>+</span>
             </div>
             <div className='h-[30rem] flex flex-col gap-8 overflow-auto'>
               {assignments.map((items, index) => (
-                <div className='text-xl font-medium bg-gradient-to-r from-indigo-500 to-purple-500 p-5 border border-black rounded-lg cursor-pointer'>
+                <div className='text-xl font-medium bg-primary/10 border border-primary/40 p-5 rounded-lg cursor-pointer'>
                   Assignment {index}
                 </div>
               ))}
             </div>
           </div>
           <div className='basis-4/5 p-10 my-auto mx-auto'>
-            <div className='border-4 border-purple-600 rounded-xl h-[40rem] w-[60rem] my-auto mx-auto'>
-                hi
+            <div className='border-2 border-primary/40  rounded-xl h-[40rem] w-[60rem] my-auto mx-auto flex flex-col items-center justify-center'>
+                <div className='text-2xl font-bold'>
+                  Create a new assignment
+                </div>
+                <div className='grid grid-cols-3 p-5'>
+                  {}
+                </div>
             </div>
           </div>
 
