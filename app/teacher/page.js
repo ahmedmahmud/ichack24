@@ -1,89 +1,25 @@
-// components/TeacherDashboard.js
+// components/TeacherHome.js
 import React from 'react';
+import { Button } from 'daisyui';
 
-const TeacherDashboard = () => {
+const TeacherHome = () => {
   return (
-    <div className="p-8">
-      {/* Section: Assignments */}
-      <div className="card mb-4">
-        <h2 className="text-2xl font-semibold mb-2">Teacher Dashboard</h2>
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
+      <div className="bg-gray-800 p-8 rounded-md shadow-md text-center max-w-md w-full mx-auto">
+        <h1 className="text-3xl font-semibold mb-8">Teacher Home</h1>
 
-        {/* Assignment 1 */}
-        <div className="collapse mb-2">
-          <input type="checkbox" />
-          <div className="collapse-title text-xl font-medium">
-            Assignment 1
-          </div>
-          <div className="collapse-content">
+        {/* Button to Create Assignment */}
+        <a href="/teacher/create_assignment" className="btn btn-primary mb-4">
+          Create Assignment
+        </a>
 
-            {/* Student Submissions for Assignment 1 */}
-            <div className="card mb-2">
-              <h3 className="text-lg font-semibold mb-2">Student Submissions</h3>
-              <div className="collapse mb-2">
-                <input type="checkbox" />
-                <div className="collapse-title text-md font-medium">
-                  Student 1 Submission
-                </div>
-                <div className="collapse-content">
-                  <p>Details of Student 1's submission for Assignment 1...</p>
-                  <audio controls className="w-full mt-2">
-                    <source src="path/to/audio-file.mp3" type="audio/mp3" />
-                    Your browser does not support the audio element.
-                  </audio>
-                </div>
-              </div>
-              <div className="collapse mb-2">
-                <input type="checkbox" />
-                <div className="collapse-title text-md font-medium">
-                  Student 2 Submission
-                </div>
-                <div className="collapse-content">
-                  <p>Details of Student 2's submission for Assignment 1...</p>
-                  <audio controls className="w-full mt-2">
-                    <source src="path/to/audio-file.mp3" type="audio/mp3" />
-                    Your browser does not support the audio element.
-                  </audio>
-                </div>
-              </div>
-              {/* Add more Collapse components for additional submissions */}
-            </div>
-
-            {/* General Feedback for Assignment 1 */}
-            <div className="card">
-              <h3 className="text-lg font-semibold mb-2">General Feedback</h3>
-              <p>General feedback for Assignment 1...</p>
-            </div>
-
-          </div>
-        </div>
-
-        {/* Assignment 2 */}
-        <div className="collapse mb-2">
-          <input type="checkbox" />
-          <div className="collapse-title text-xl font-medium">
-            Assignment 2
-          </div>
-          <div className="collapse-content">
-
-            {/* Student Submissions for Assignment 2 */}
-            <div className="card mb-2">
-              <h3 className="text-lg font-semibold mb-2">Student Submissions</h3>
-              {/* ... Similar structure for student submissions */}
-            </div>
-
-            {/* General Feedback for Assignment 2 */}
-            <div className="card">
-              <h3 className="text-lg font-semibold mb-2">General Feedback</h3>
-              {/* ... General feedback content */}
-            </div>
-
-          </div>
-        </div>
-
-        {/* Add more Collapse components for additional assignments */}
+        {/* Button to Go to Dashboard */}
+        <a href="/teacher/dashboard" className="btn btn-secondary">
+          Go to Dashboard
+        </a>
       </div>
     </div>
   );
 };
 
-export default TeacherDashboard;
+export default TeacherHome;
